@@ -1,4 +1,5 @@
 require(['jquery', 'helpers'], function($){
+
     var url = "";
     var currenthash = "";
     var pageId = "";
@@ -51,6 +52,12 @@ require(['jquery', 'helpers'], function($){
         /*************** END window resize *****************/
 
         /*************** On Clicks *****************/
+        $('.data-type-tabs .tab').click(function(){
+            if(!$(this).hasClass('active')){
+                $('.data-type-tabs .tab').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
 
         /************* END On Clicks ***************/
 
@@ -99,6 +106,8 @@ require(['jquery', 'helpers'], function($){
 
         /********** END LOAD MAP ***************/
 
+
     });
     //******* FUNCTIONS HERE *******//
+
 });

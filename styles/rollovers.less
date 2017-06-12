@@ -1,7 +1,28 @@
 //.not-handheld{
 @media (min-width:769px){
     html:not(.handheld){
-
-
+        .data-type-tabs{
+             .tab{
+                 &:not(.active){
+                     &:hover, &:focus{
+                         opacity: 1;
+                     }
+                 }
+             }
+        }
+        .ghost-button{
+            &:not(.loading){
+                &:hover, &:focus{
+                    background:@red;
+                    color:white;
+                }
+            }
+        }
+        .product{
+            &:hover, &:focus{
+                background:#f8f7f6;
+                box-shadow: 1px 1px 8px 5px fade(black, 7%);
+            }
+        }
     }
 }
